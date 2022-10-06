@@ -9,42 +9,33 @@ A service will generate some randome text based on the input via Markov chain.
 
 ## How to run
 
-Project is dockerized. docker deamon is needed.
+Project is dockerized. docker deamon is needed. And in order to build, you
+need docker-compose.
 
-####Docker version:
+####Docker and Docker-compose version:
 - Version:           19.03.5
 - API version:       1.40
+- Docker-compose:    1.24.1
 
 ### Steps
 
-- Maven build jar and docker image. Use maven profile docker-image.
+- build docker images, please in the top level folder.
 
 ```sh
-mvn clean install -Pdocker-image
+docker-compose up
 ```
 
-- After that, we can verify the image build.
-
-```sh
-docker images
-```
-like below:
-
-
-- Run docker images.
-```sh
-docker run -d -p 8000:50000 -t demo:0.0.1-SNAPSHOT
-```
+if everything working fine, you are suppose to see the output:
+![img_5.png](img_5.png)
 
 - Open Brower to verify the result.
 ```sh
-http://localhost:9002
+http://localhost:9001
 ```
 
 upload any text file( size must be smaller than 512KB )
 
-
-![img.png](img.png) 
+![img_4.png](img_4.png)
 
 click generate button and see the text
 
