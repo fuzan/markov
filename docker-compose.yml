@@ -1,0 +1,15 @@
+version: '3.6'
+services:
+  back:
+    build: ./backend
+    image: zanfu/markovapp
+    container_name: zanfu_markovapp
+    ports:
+      - 9000:9000
+
+  front:
+    build: ./frontend
+    image: zanfu/markovfrontapp
+    container_name: zanfu_markovfrontapp
+    ports:
+      - 9001:9001
