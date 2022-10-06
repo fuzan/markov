@@ -18,10 +18,13 @@ need docker-compose.
 - Docker-compose:    1.24.1
 
 ### Steps
-
-- build docker images, please in the top level folder.
+- git clone this project to your local
+- stay at top level folder
+- build docker images using docker-compose.
 
 ```sh
+git clone https://github.com/fuzan/markov.git
+
 docker-compose up
 ```
 
