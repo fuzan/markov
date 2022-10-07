@@ -24,7 +24,9 @@ need docker-compose.
 
 ```sh
 git clone https://github.com/fuzan/markov.git
-
+cd ./backend
+mvn install
+cd ..
 docker-compose up
 ```
 
